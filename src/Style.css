@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
 
 body {
-    background: linear-gradient(to bottom, #FFDAB9, #FFFACD); /* gradient from light peach to cream */
-    color: #006400; /* dark green */
+    background: linear-gradient(to bottom, #FFDAB9, #FFFACD);
+    color: #006400;
     font-family: Lora, 'Times New Roman', Times, serif;
     line-height: 1.6;
     margin: 0;
@@ -13,29 +13,23 @@ body {
 .container {
     padding: 20px;
     min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
 }
 
-.info {
-    padding: 2px 16px;
+.info, .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.meat {
-    margin: 20px auto; /* Adds a margin to the top and bottom, and auto-aligns the left and right */
-    padding: 20px; /* Adds padding inside the div */
-    max-width: 800px; /* Limits the width of the content to 800px */
-    background-color: #fff; /* Sets the background color to white */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the div */
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.meat, .card {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .news {
@@ -43,83 +37,74 @@ body {
     width:222px;
 }
 
-h1, h2 {
-    color: #333333; /* dark grey */
-}
-
-h1, h2, p {
+h1, h2, p, a {
     margin-bottom: 20px;
 }
 
-a {
-    color: #606060; /* modern, subtle gray */
+h1, h2, .topnav a {
+    color: #333333;
+}
+
+a, .fab {
+    color: #606060;
     text-decoration: none;
 }
 
-a:hover {
-    color: #800000; /* maroon */
+a:hover, .topnav a:hover {
+    color: #800000;
 }
 
-.fab {
-    color: #606060; /* modern, subtle gray */
-}
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 100%; /* This will make the card take up the full width of its container */
-    margin-bottom: 20px; /* This adds some space between the cards */
+    width: 100%;
 }
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.card img {
-    width: 40%; /* adjust as needed */
-    height: auto; /* maintain aspect ratio */
-    display: block; /* center the image */
+.card img, .logo {
+    width: 15%;
+    height: auto;
+    display: block;
     margin: 0 auto;
 }
 
-.logo {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-}
-
-.header, .topnav {
+.header {
     flex: 1;
     text-align: center;
 }
 
-.topnav a {
-    margin: 0 10px;
-    color: #006400;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.topnav {
+    background-color: #f2f2f2;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    line-height: 1;
 }
 
-.topnav a:hover {
-    color: #800080;
+.topnav a {
+    font-size: 17px;
+    margin-right: 15px;
+}
+
+.topnav a.active {
+    color: #4CAF50;
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #f2f2f2; /* This will make the background of the footer a light grey */
-    padding: 20px 0; /* This adds some vertical padding */
-    width: 100%; /* This will make sure that the footer takes up the full width of the page */
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    width: 100%;
 }
 
 .footer div {
-    flex: 1 1 200px; /* This will make the divs take up equal space and wrap as needed */
+    flex: 1 1 200px;
     margin: 10px;
-    text-align: center; /* This will center the text within each div */
+    text-align: center;
 }
